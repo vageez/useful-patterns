@@ -3,6 +3,8 @@
 # HOC data fetching layer
 
 ```
+// file comp/with-query.js
+
 const WithQuery = (Component, Skeleton) => {
   // @param id - unique id to fetch content, passed in at the time of calling the HOC
   const WithContents = (id) => {
@@ -34,5 +36,17 @@ import React, { useEffect, useState } from "react";
 
 export default WithQuery;
 
+// USAGE
+// file comp/index.js
+
+import WithQuery from 'with-query'
+
+export default WithQuery(ReactComponent, ReactSkeletonComponent);
+
+// USAGE
+
+import Component from 'comp/index'
+
+<Component id={123abc}/>
 
 ```
