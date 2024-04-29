@@ -5,9 +5,9 @@
 ```
 // file comp/with-query.js
 
-const WithQuery = (Component, Skeleton) => {
+const WithIO = (Component, Skeleton) => {
   // @param id - unique id to fetch content, passed in at the time of calling the HOC
-  const WithContents = (id) => {
+  const FetchContents = (id) => {
     const [content, setContent] = useState();
     const fetch = (id) =>
       Promise.resolve().then((data) => {
@@ -28,13 +28,13 @@ const WithQuery = (Component, Skeleton) => {
     }
   };
 
-  WithContents.displayName = "WithContents";
-  return WithContents;
+  FetchContents.displayName = "FetchContents";
+  return FetchContents;
 };
 
 import React, { useEffect, useState } from "react";
 
-export default WithQuery;
+export default WithIO;
 
 // USAGE
 // file comp/index.js
