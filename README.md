@@ -3,7 +3,7 @@
 # HOC data fetching layer
 
 ```
-// file comp/with-query.js
+// file comp/with-io.js
 
 const WithIO = (Component, Skeleton) => {
   // @param id - unique id to fetch content, passed in at the time of calling the HOC
@@ -39,9 +39,9 @@ export default WithIO;
 // USAGE
 // file comp/index.js
 
-import WithQuery from 'with-query'
+import WithIO from 'with-io'
 
-export default WithQuery(ReactComponent, ReactSkeletonComponent);
+export default WithIO(ReactComponent, ReactSkeletonComponent);
 
 // USAGE
 
